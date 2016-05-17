@@ -50,6 +50,9 @@ lazy val core = (project in file("core")).
 lazy val root = (project in file(".")).
   dependsOn(core % "test->test;compile->compile").
   aggregate(core).
+  settings(
+    aggregate in Test := false
+  ).
   enablePlugins(
     BuildInfoPlugin,
     JavaAppPackaging
