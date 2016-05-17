@@ -10,4 +10,4 @@ test:
   override:
     - sbt coverage core/test test
   post:
-    - sbt coverageReport aggregateReport coveralls
+    - sbt core/coverageReport coverageReport coverageAggregate coveralls
