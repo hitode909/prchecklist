@@ -8,6 +8,6 @@ dependencies:
     - sbt test:compile
 test:
   override:
-    - sbt coverage core/test test
+    - sbt coverage test
   post:
-    - sbt core/coverageReport coverageReport coverageAggregate coveralls
+    - sbt coverageReport coverageAggregate coveralls
